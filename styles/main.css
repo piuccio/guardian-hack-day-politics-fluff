@@ -1,0 +1,51 @@
+.keywords a {
+	margin-right: 0;
+}
+.card-image {
+	height: 300px;
+	overflow: hidden;
+}
+.js-while-loading .profile,
+.js-while-loading .content,
+.js-while-loading .vote,
+.js-while-loading .content-expanded {
+	display: none;
+}
+.selected {
+	background-color: #fff8e1;
+}
+.content,
+.content-expanded {
+	transition: max-height 0.2s;
+	max-height: 600px;
+}
+.js-collapsed {
+	max-height: 0px;
+	overflow: hidden;
+}
+table {
+	background-color: white;
+	color: #37474f;
+	margin-top: 12px;
+}
+td {
+	padding: 6px 10px;
+}
+.list-articles {
+	display: none;
+}
+.key-term {
+	width: 35%;
+}
+.bar-value div {
+	background-color: #26c6da;
+}
+.close-extra {
+	display: inline-block;
+	text-align: right;
+	width: 100%;
+}
+.card-title {
+	background-color: rgba(50,50,50,0.1);
+	width: 100%;
+}

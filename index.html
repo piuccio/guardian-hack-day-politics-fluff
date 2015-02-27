@@ -1,0 +1,75 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Politics</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="vendor/materialize/css/materialize.min.css">
+        <link rel="stylesheet" href="jspm_packages/github/jquery/jquery-ui@1.11.3/themes/base/core.css">
+        <link rel="stylesheet" href="jspm_packages/github/jquery/jquery-ui@1.11.3/themes/base/base.css">
+        <link rel="stylesheet" href="jspm_packages/github/jquery/jquery-ui@1.11.3/themes/base/theme.css">
+        <link rel="stylesheet" href="jspm_packages/github/jquery/jquery-ui@1.11.3/themes/base/menu.css">
+        <link rel="stylesheet" href="jspm_packages/github/jquery/jquery-ui@1.11.3/themes/base/autocomplete.css">
+        <link rel="stylesheet" href="styles/main.css">
+        <script src="jspm_packages/github/components/jquery@2.1.3/jquery.min.js"></script>
+        <script src="jspm_packages/github/jquery/jquery-ui@1.11.3/ui/core.js"></script>
+        <script src="jspm_packages/github/jquery/jquery-ui@1.11.3/ui/widget.js"></script>
+        <script src="jspm_packages/github/jquery/jquery-ui@1.11.3/ui/position.js"></script>
+        <script src="jspm_packages/github/jquery/jquery-ui@1.11.3/ui/menu.js"></script>
+        <script src="jspm_packages/github/jquery/jquery-ui@1.11.3/ui/autocomplete.js"></script>
+        <script src="vendor/materialize/js/materialize.min.js"></script>
+    </head>
+    <body>
+        <div class="section">
+            <div class="row">
+                <div class="col s12">
+                    <div class="input-field col s12">
+                        <input id="js-search" type="text" class="validate">
+                        <label for="js-search">Member of Parliament</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="display:none;">
+            <div class="js-mp-card col s6 m4">
+                <div class="card blue-grey darken-1">
+                    <div class="js-card-content card-content white-text js-while-loading">
+                        <span class="card-title js-title">Loading Data ...</span>
+                        <p class="profile"><a class="js-profile" href="#">Profile</a></p>
+                        <div class="content js-content">
+                            <p>Hi, I'm <span class="js-name"></span> of the <span class="js-party lime-text text-lighten-3"></span> party and I like to talk about: <span class="keywords js-keywords"></span> and more.</p>
+                            <p class="vote">Vote for me!</p>
+                        </div>
+                        <div class="content-extra js-extra js-collapsed">
+                            <span class="close-extra js-close-extra">Close</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="js-mp-image card-image">
+                <img class="js-main-image">
+                <span class="card-title js-title">Ed Miliband</span>
+            </div>
+        </div>
+
+        <div class="section js-search-results"></div>
+        <div class="section js-top-leaders"></div>
+
+
+        <script>
+            if (window.location.search.indexOf('dev') === -1) {
+                document.write('<scr' + 'ipt src="bundle.js"><' + '/script>');
+            } else {
+                document.write('<scr' + 'ipt src="jspm_packages/system.js"><' + '/script>');
+                document.write('<scr' + 'ipt src="config.js"><' + '/script>');
+            }
+        </script>            
+        <script>
+            System.import('main');
+        </script>
+    </body>
+</html>
